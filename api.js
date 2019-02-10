@@ -1,8 +1,5 @@
 
 const startPreviewer = () => {
-	console.log('Page Loaded')
-
-    
 	const fetchData = () => {
 		const url = `https://api.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey=HKNJ99D68IEHX5K1GP12X8B7ZFN16MNCFY`
         return fetch(url)
@@ -28,26 +25,17 @@ const startPreviewer = () => {
                 var apiData = response.result.difficulty   
                 let n = parseInt(apiData)/1000000000000
                 let m = Math.round(n*100)/100
-                document.getElementById('difficulty').textContent =  m +" "+ "\T"+"\H"
-
-
-                  
+                document.getElementById('difficulty').textContent =  m +" "+ "\T"+"\H"   
             })
-
-
     })
-
 
     const fetchData2 = ()=>{
 		const url = `https://api.etherscan.io/api?module=proxy&action=eth_getTransactionCount&address=0x2910543af39aba0cd09dbb2d50200b3e800a63d2&tag=latest&apikey=HKNJ99D68IEHX5K1GP12X8B7ZFN16MNCFY`
         return fetch(url)
-
     }
 
     fetchData2().then(response =>{
-        console.log(response)
         return response.json()
-
 
     } ).then( response => {
         console.log(response)   
@@ -57,45 +45,33 @@ const startPreviewer = () => {
         
     })
 
-    const fetchData3 = (price)=>{
-        console.log(price)
+    const fetchData3 = ()=>{
 		const url = `https://api.etherscan.io/api?module=stats&action=ethprice&apikey=HKNJ99D68IEHX5K1GP12X8B7ZFN16MNCFY`
         return fetch(url)
 
     }
 
     fetchData3().then(response =>{
-        console.log(response)
         return response.json()
 
 
     } ).then( response => {
-        console.log(response) 
-        
+        console.log(response)  
         var ethbtc = response.result.ethbtc
         console.log ('ethbtc', ethbtc)
         var ethusd = response.result.ethusd
         document.getElementById('price').textContent = "\$" + ethusd + " "+"\@"+ethbtc+" "+ "\B\T\C\/\E\T\H"
-        
-
-        
-        
-        
+                
     })
 
-    const fetchData4 = (price)=>{
-        console.log(price)
+    const fetchData4 = ()=>{
 		const url = `https://www.etherchain.org/api/basic_stats`
         return fetch(url)
 
     }
 
-
     fetchData4().then(response =>{
-        console.log(response)
         return response.json()
-
-
     } ).then( response => { 
         console.log(response) 
            //var dificulty = response.currentStats.dificulty
@@ -105,7 +81,6 @@ const startPreviewer = () => {
 })
 
 const fetchData5 = (searchTerm) => {
-    console.log(searchTerm)
     const url = `https://api.etherscan.io/api?module=account&action=balance&address=${searchTerm}=0xddbd2b932c763ba5b1b7ae3b362eac3e8d40121a&tag=latest&apikey=YourApiKeyToken`
     return fetch(url)
     
@@ -118,28 +93,17 @@ form.addEventListener('submit',function(e){
     var searchTerm = document.getElementById('searchbox').value
 
     fetchData5(searchTerm).then(response=>{
-
         if (response.ok) {
             return response.json()
         }
         throw new Error('Api did not respond')
     }).then(response => {
-
         console.log(response)
-
         let n = response.result
         document.getElementById('output'). textContent = n
         
-
-        
-
     })
-
-
-
-
 })
-
 }
 
 window.addEventListener("load", startPreviewer)

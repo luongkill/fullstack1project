@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Create a link html tag here-->
+    </head>
+
+    <body>
+
+      <img id="logo-header" src="https://etherscan.io/images/EtherscanLogo-transparent-b-small.png" alt="Logo" style="width: 20%" >
+      
+      <div class="searchInput">
+
+
+          <div class="inpWrapper">
+              <div style="background: #ebf6e0; border-radius: 2px; border: 1px solid #b3dc82; box-sizing: border-box; float: none; margin: 0px auto; outline: 0px; padding: 15px 20px; vertical-align: baseline; color: #5f9025; font-family: arial, sans-serif; font-size: 15px;">You can Lookup the Account (Ether) Historical Balance</div>
+              <br>
+              Input the Account/Contract Address
+
+            <form id="search-form">
+              <input id="searchbox" type="search"></input>
+              <button id="searchbutton">Lookup</button>
+            <br></form>
+               
+            <div id="output"></div>
+          </div>
+
+
+
+        </div>
+
+      <table>
+        <tr>
+          <td width=20%> 
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/High-contrast-applications-internet.svg/1000px-High-contrast-applications-internet.svg.png" alt="">
+          </td>
+          <td width=70%>
+              <p > <a href="https://etherscan.io/stat/supply" title="View More">MARKET CAP OF $10.909 BILLION</a>  </p>
+              <p > <a id='price'  href="https://etherscan.io/chart/etherprice" title="View Historical Ether Price">$104.13 @ 0.03072 BTC/ETH 0.13%</a>  </p>
+          </td>
+          <td width=20%>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </td>
+        </tr>
+        <table>
+
+        <table>
+  
+        <tr>
+
+          <td width=50% class="left">
+            <p > <a id="abc" href="https://etherscan.io/blocks"title ="VIEW LIST OF BLOCK">LAST BLOCK</a>  </p>
+            <p > <a id='lastblock' href="https://etherscan.io/blocks"title ="The Lastest Block No"></a> </p>
+          </td>
+          <td width=50% class="right">
+            <p> <a href="https://etherscan.io/txs"title =" VIEW LIST OF TRANSACTIONS">TRANSACTIONS </a> </p>
+              <p ><a id ='transactions' href="https://etherscan.io/txs" title ="number of transactions sent from an address"> </a></p>
+          </td>
+        </tr>
+        <tr>
+          <td width=50% class="left">
+              <p> <a href="https://etherscan.io/chart/hashrate" title="View Hashrate Chart">Hash Rate </a> </p>
+              <p><a id='hashrate' title ="Hash rate"></a> </p>
+          </td>
+          <td width=50% class="right">
+              <p> <a href="https://etherscan.io/chart/difficulty" title="View Difficulty Growth Chart">Network Difficulty </a> </p>
+              <p > <a id='difficulty' title ="Current Difficulty"></a> </p>
+          </td>
+        </tr>
+      </table>
+
+      
+  
+      
+
+      
+
+      <div class="bottom">
+          <a href="http://www.ethereum.org" >
+         <img id="logo-footer" class="footer-logo" src="https://etherscan.io/images/Powered-by-Ethereum-small.png" style="width:28%"></a>
+         <p style="font-family:'Open Sans',sans-serif; font-size: 12px; color: #C0C0C0;bottom: 0">Etherscan is a Block Explorer and Analytics Platform for Ethereum, a decentralized smart contracts platform.</p>
+         </div>
+
+
+      
+      <script src="./api.js"></script>
+
+    </body>
+  

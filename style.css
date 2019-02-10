@@ -61,20 +61,23 @@
   img {
     height: 70px;
     width: 70px;
+    
 
   }
   .text {
-      float:left;
+      float: left;;
     
   }
   .button {
       float:left;
   }
   table{
-      width:620px;
+      width:570px;
       background-color: #3498db;
       color: white;
       padding: 20px;
+      position: relative;
+   
       
   }
 
@@ -85,8 +88,9 @@
       
   }
   .right{
-      padding-left:130px;
+      padding-left:170px;
   }
+  
 a:hover {
     position: relative;
     text-decoration: underline;
@@ -107,17 +111,17 @@ a:hover {
     font-family: "Arial", Times, serif;
   }
 
-  .bottom{
-    background-color:#464944;
-    position: fixed;
-    bottom:0;
-    
+  .bottom{  
+    position: absolute;
+    margin-top: 30px;
+     
   }
 
   .searchInput {
     display: flex;
     float: right;
-    margin-top: 70px;
+    margin-top: 80px;
+    
     
   }
   
